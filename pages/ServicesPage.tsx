@@ -17,7 +17,8 @@ const services = [
       'E-commerce & payment integration',
       'Admin dashboards',
       'SEO & speed optimization'
-    ]
+      ],
+    imageUrl: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1506&auto=format&fit=crop'
   },
   {
     icon: <CloudIcon className="w-10 h-10" />,
@@ -28,7 +29,8 @@ const services = [
       'Cloud server configuration',
       'Daily backups & data protection',
       'Professional email hosting'
-    ]
+      ],
+    imageUrl: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1470&auto=format&fit=crop'
   },
   {
     icon: <CpuChipIcon className="w-10 h-10" />,
@@ -39,7 +41,8 @@ const services = [
       'Smart workflows to reduce manual work',
       'Predictive analytics for business insights',
       'Custom AI tools designed for your business'
-    ]
+     ],
+    imageUrl: 'https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=1470&auto=format&fit=crop'
   },
   {
     icon: <WrenchScrewdriverIcon className="w-10 h-10" />,
@@ -50,8 +53,9 @@ const services = [
       'Hardware & network setup',
       'Security monitoring',
       'Long-term maintenance contracts'
-    ]
-  }
+    ],
+     imageUrl: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1470&auto=format&fit=crop'
+   }
 ];
 
 const ServicesPage: React.FC = () => {
@@ -90,7 +94,7 @@ const ServicesPage: React.FC = () => {
                     </ul>
                 </div>
                 <div className="md:w-1/2">
-                    <img loading="lazy" src={`https://picsum.photos/600/400?random=${index}`} alt={service.title} className="rounded-lg shadow-2xl" />
+                    <img loading="lazy" src={service.imageUrl} alt={service.title} className="rounded-lg shadow-2xl" />
                 </div>
                 </div>
             </AnimatedSection>

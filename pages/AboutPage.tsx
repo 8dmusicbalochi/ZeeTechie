@@ -5,27 +5,27 @@ const teamMembers = [
   {
     name: 'Waheed',
     role: 'Founder & CEO',
-    imageUrl: 'https://picsum.photos/seed/waheed/400/400',
-  },
+    imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop',
+ },
   {
     name: 'Mamoon Rasheed',
     role: 'Lead Developer',
-    imageUrl: 'https://picsum.photos/seed/mamoon/400/400',
+    imageUrl: 'https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=400&auto=format&fit=crop',
   },
   {
     name: 'Jasim Murad',
     role: 'UI/UX Designer',
-    imageUrl: 'https://picsum.photos/seed/jasim/400/400',
+    imageUrl: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=400&auto=format&fit=crop',
   },
   {
     name: 'Ameer Jan',
     role: 'Project Manager',
-    imageUrl: 'https://picsum.photos/seed/ameer/400/400',
+    imageUrl: 'https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=400&auto=format&fit=crop',
   },
   {
     name: 'Naseem Jumma',
-    role: 'IT Support Specialist',
-    imageUrl: 'https://picsum.photos/seed/naseem/400/400',
+    role: 'Cyber Security Specialist',
+    imageUrl: 'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=400&auto=format&fit=crop',
   },
 ];
 
@@ -63,7 +63,7 @@ const AboutPage: React.FC = () => {
                     </div>
                 </div>
                 <div className="md:w-1/2">
-                    <img loading="lazy" className="rounded-lg shadow-2xl w-full" src="https://picsum.photos/600/400?grayscale&blur=2" alt="ZTechie Team" />
+                    <img loading="lazy" className="rounded-lg shadow-2xl w-full" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop" alt="ZTechie Team" />
                 </div>
             </div>
         </AnimatedSection>

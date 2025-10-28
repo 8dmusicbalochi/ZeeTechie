@@ -9,7 +9,7 @@ const portfolioItems = [
     description: 'Built a scalable e-commerce site with custom inventory management, increasing online sales by 40%.',
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
     results: '40% increase in sales, 25% faster checkout process.',
-    imageUrl: 'https://picsum.photos/seed/ecommerce/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1470&auto=format&fit=crop'
   },
   {
     title: 'AI Customer Support Bot',
@@ -18,7 +18,7 @@ const portfolioItems = [
     description: 'Developed an AI-powered chatbot to handle customer queries 24/7, reducing support ticket volume.',
     technologies: ['Python', 'Dialogflow', 'Firebase'],
     results: 'Reduced support tickets by 60%, improved customer satisfaction.',
-    imageUrl: 'https://picsum.photos/seed/aibot/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=1470&auto=format&fit=crop'
   },
   {
     title: 'Corporate Website Redesign',
@@ -27,7 +27,7 @@ const portfolioItems = [
     description: 'A complete redesign focusing on modern UX/UI and mobile-first principles to improve lead generation.',
     technologies: ['Next.js', 'Tailwind CSS', 'Sanity CMS'],
     results: '50% more leads generated through the new contact forms.',
-    imageUrl: 'https://picsum.photos/seed/corpweb/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1470&auto=format&fit=crop'
   },
    {
     title: 'Cloud Infrastructure Migration',
@@ -36,7 +36,7 @@ const portfolioItems = [
     description: 'Migrated entire on-premise infrastructure to a secure and scalable cloud environment on AWS.',
     technologies: ['AWS', 'Docker', 'Terraform', 'CI/CD'],
     results: 'Improved uptime to 99.99% and reduced operational costs by 30%.',
-    imageUrl: 'https://picsum.photos/seed/cloud/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1590955979927-a31677947614?q=80&w=1471&auto=format&fit=crop'
   },
   {
     title: 'Data Analytics Dashboard',
@@ -45,7 +45,7 @@ const portfolioItems = [
     description: 'A real-time analytics dashboard for visualizing campaign performance, built with React.',
     technologies: ['React', 'D3.js', 'Node.js'],
     results: 'Provided key insights that led to a 15% improvement in ad spend efficiency.',
-    imageUrl: 'https://picsum.photos/seed/dashboard/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop'
   },
   {
     title: 'Telemedicine & Patient Portal',
@@ -54,7 +54,7 @@ const portfolioItems = [
     description: 'A secure web application for virtual doctor consultations, appointment scheduling, and patient record management to improve healthcare accessibility.',
     technologies: ['React Native', 'WebRTC', 'Node.js', 'PostgreSQL'],
     results: 'Increased patient engagement by 50% and reduced administrative overhead for appointment booking.',
-    imageUrl: 'https://picsum.photos/seed/telemed/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1584515933487-779824d27929?q=80&w=1470&auto=format&fit=crop'
   },
   {
     title: 'Cloud-Based POS System',
@@ -63,7 +63,7 @@ const portfolioItems = [
     description: 'A custom point-of-sale system with real-time sales tracking, inventory management, and customer loyalty features, accessible from any device.',
     technologies: ['React', 'Electron', 'SQLite', 'Stripe'],
     results: 'Streamlined the checkout process, reducing transaction times by 30% and providing valuable sales analytics.',
-    imageUrl: 'https://picsum.photos/seed/pos/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1570857502809-08184874388e?q=80&w=1470&auto=format&fit=crop'
   },
   {
     title: 'Donor Management Platform',
@@ -72,7 +72,7 @@ const portfolioItems = [
     description: 'A comprehensive platform for managing donor relationships, tracking fundraising campaigns, and automating donation receipts for a non-profit organization.',
     technologies: ['Next.js', 'Firebase', 'Tailwind CSS'],
     results: 'Boosted online donations by 25% through a more intuitive user experience and simplified donation process.',
-    imageUrl: 'https://picsum.photos/seed/ngo/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?q=80&w=1470&auto=format&fit=crop'
   },
   {
     title: 'Managed IT Services',
@@ -81,7 +81,7 @@ const portfolioItems = [
     description: 'Provided comprehensive IT support, including network security, hardware maintenance, and 24/7 helpdesk services, ensuring uninterrupted business operations.',
     technologies: ['Active Directory', 'Cybersecurity', 'Network Monitoring'],
     results: 'Achieved 99.9% system uptime and resolved 95% of support tickets within the first hour.',
-    imageUrl: 'https://picsum.photos/seed/itsupport/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1470&auto=format&fit=crop'
   },
   {
     title: 'Healthcare Analytics Platform',
@@ -90,7 +90,7 @@ const portfolioItems = [
     description: 'Developed an AI-driven platform to analyze patient data, predict disease outbreaks in the region, and optimize hospital resource allocation.',
     technologies: ['Python', 'TensorFlow', 'React', 'Tableau'],
     results: 'Improved patient outcome predictions by 20% and optimized bed allocation, leading to a 15% reduction in operational costs.',
-    imageUrl: 'https://picsum.photos/seed/health-analytics/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1480&auto=format&fit=crop'
   },
   {
     title: 'Enterprise Retail POS',
@@ -99,7 +99,7 @@ const portfolioItems = [
     description: 'Engineered a robust, multi-location POS and inventory management system designed for high-volume retail, with centralized reporting and analytics.',
     technologies: ['Vue.js', '.NET Core', 'SQL Server', 'Azure'],
     results: 'Unified inventory across 50+ stores, reduced checkout errors by 90%, and provided C-level executives with real-time sales data.',
-    imageUrl: 'https://picsum.photos/seed/enterprise-pos/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1580913428023-02c695666d61?q=80&w=1383&auto=format&fit=crop'
   },
   {
     title: 'Volunteer Coordination App',
@@ -108,7 +108,7 @@ const portfolioItems = [
     description: 'Created a mobile-first web app to streamline volunteer recruitment, scheduling, and communication for large-scale events and disaster relief efforts.',
     technologies: ['Flutter', 'Firebase', 'Google Maps API'],
     results: 'Increased volunteer sign-ups by 40% and reduced administrative time for event organization by over 20 hours per week.',
-    imageUrl: 'https://picsum.photos/seed/volunteer-app/600/400'
+    imageUrl: 'https://images.unsplash.com/photo-1593113589674-c76b9f825faf?q=80&w=1470&auto=format&fit=crop'
   }
 ];
 

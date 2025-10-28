@@ -15,19 +15,19 @@ const testimonials = [
     quote: "ZTechie transformed our business with an automated online system — our sales increased by 60% within 3 months!",
     author: "John Doe",
     title: "CEO, Local Business",
-    avatarUrl: 'https://picsum.photos/seed/johndoe/100/100',
+    avatarUrl: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=200&auto=format&fit=crop',
   },
   {
     quote: "The team's expertise in cloud infrastructure is unmatched. They migrated our systems seamlessly with zero downtime.",
     author: "Jane Smith",
     title: "CTO, Tech Startup",
-    avatarUrl: 'https://picsum.photos/seed/janesmith/100/100',
+    avatarUrl: 'https://images.unsplash.com/photo-1580852300654-034f80071d75?q=80&w=200&auto=format&fit=crop',
   },
   {
     quote: "Their AI chatbot has revolutionized our customer support, handling over 70% of inquiries and freeing up our team for complex issues.",
     author: "Sam Wilson",
     title: "Head of Support, SaaS Co.",
-    avatarUrl: 'https://picsum.photos/seed/samwilson/100/100',
+    avatarUrl: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=200&auto=format&fit=crop',
   },
 ];
 
@@ -114,7 +114,7 @@ const HomePage: React.FC = () => {
                 <div style={{ transform: `translateY(${offsetY * 0.2}px)` }}>
                     <div className="flex justify-center items-center mt-12 md:mt-0">
                     <img 
-                        src="https://picsum.photos/seed/ztechie-hero/800/600" 
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop" 
                         alt="A representation of modern technology and smart solutions" 
                         className="rounded-xl shadow-2xl w-full max-w-lg"
                     />
@@ -225,7 +225,7 @@ const HomePage: React.FC = () => {
                                     loading="lazy"
                                     src={testimonial.avatarUrl}
                                     alt={`Avatar of ${testimonial.author}`}
-                                    className="w-16 h-16 rounded-full mx-auto mb-4 ring-4 ring-brand-primary"
+                                    className="w-16 h-16 rounded-full mx-auto mb-4 ring-4 ring-brand-primary object-cover"
                                 />
                                 <span className="font-semibold text-brand-text-primary dark:text-dark-brand-text-primary">{testimonial.author}</span>
                                 <span className="block text-brand-text-secondary dark:text-dark-brand-text-secondary">{testimonial.title}</span>
