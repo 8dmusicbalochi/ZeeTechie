@@ -9,6 +9,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import PricingPage from './pages/PricingPage';
 import ContactPage from './pages/ContactPage';
 import BackToTopButton from './components/BackToTopButton';
+import CaseStudyPage from './pages/CaseStudyPage';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState(() => {
@@ -46,6 +47,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/portfolio/:slug" element={<CaseStudyPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>

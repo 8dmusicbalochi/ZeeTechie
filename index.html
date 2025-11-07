@@ -26,22 +26,35 @@
         theme: {
           extend: {
             colors: {
-              'brand-primary': '#1cd7c2',       // Vibrant Teal
-              'brand-accent': '#1BD6C1',        // Teal
+              'brand-primary': '#0D9488',       // Teal
+              'brand-accent': '#2DD4BF',        // Lighter Teal
               
               // Light Theme
-              'brand-background': '#E8E9EB',    // Light Gray
+              'brand-background': '#F9FAFB',    // Light Gray
               'brand-white': '#FFFFFF',         // White
-              'brand-dark': '#0A122A',           // Dark Navy for text/headers
-              'brand-text-primary': '#0A122A',  // Dark Navy text
-              'brand-text-secondary': '#6B7280',// Gray text
+              'brand-dark': '#1F2937',          // Dark Gray
+              'brand-text-primary': '#1F2937',  // Dark Gray text
+              'brand-text-secondary': '#6B7280',// Medium Gray text
 
               // Dark Theme
               'dark-brand-background': '#181920',
               'dark-brand-surface': '#242631',
-              'dark-brand-text-primary': '#F4F7FA',
-              'dark-brand-text-secondary': '#BFC7D5',
+              'dark-brand-text-primary': '#F9FAFB',
+              'dark-brand-text-secondary': '#9CA3AF',
             },
+            animation: {
+              'fade-in-scale': 'fadeInScale 0.3s ease-out forwards',
+              'shimmer': 'shimmer 1.5s infinite',
+            },
+            keyframes: {
+              fadeInScale: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              shimmer: {
+                '100%': { transform: 'translateX(100%)' },
+              }
+            }
           },
         },
       }
@@ -56,6 +69,11 @@
   }
 }
 </script>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 </head>
   <body class="bg-brand-background text-brand-text-primary dark:bg-dark-brand-background dark:text-dark-brand-text-primary">
     <div id="root"></div>
