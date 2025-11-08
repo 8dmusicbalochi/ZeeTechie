@@ -31,6 +31,16 @@ const testimonials = [
   },
 ];
 
+const slugify = (text: string) =>
+  text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/[^\w-]+/g, '') // Remove all non-word chars
+    .replace(/--+/g, '-') // Replace multiple - with single -
+    .replace(/^-+/, '') // Trim - from start of text
+    .replace(/-+$/, ''); // Trim - from end of text
+
 const HomePage: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [offsetY, setOffsetY] = useState(0);
@@ -172,15 +182,17 @@ const HomePage: React.FC = () => {
             <AnimatedSection>
                 <ServiceCard
                 icon={<CodeBracketIcon />}
-                title="Web Development"
+                title="Web Development & Design"
                 description="Modern, responsive websites built for performance and user experience."
+                link={`/services#${slugify('Web Development & Design')}`}
                 />
             </AnimatedSection>
             <AnimatedSection transitionDelay="delay-100">
                 <ServiceCard
                 icon={<CloudIcon />}
-                title="Hosting & Cloud"
+                title="Website Hosting & Cloud Solutions"
                 description="Secure, scalable, and reliable cloud solutions to keep you online."
+                link={`/services#${slugify('Website Hosting & Cloud Solutions')}`}
                 />
             </AnimatedSection>
             <AnimatedSection transitionDelay="delay-200">
@@ -188,13 +200,15 @@ const HomePage: React.FC = () => {
                 icon={<CpuChipIcon />}
                 title="AI & Automation"
                 description="Intelligent systems to automate tasks and boost business efficiency."
+                link={`/services#${slugify('AI & Automation')}`}
                 />
             </AnimatedSection>
             <AnimatedSection transitionDelay="delay-300">
                 <ServiceCard
                 icon={<WrenchScrewdriverIcon />}
-                title="IT Support"
+                title="IT Support & Consultancy"
                 description="Expert tech support to ensure your operations run without a hitch."
+                link={`/services#${slugify('IT Support & Consultancy')}`}
                 />
             </AnimatedSection>
           </div>
@@ -292,16 +306,19 @@ interface ServiceCardProps {
     icon: React.ReactNode;
     title: string;
     description: string;
+    link: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => (
-    <div className="bg-brand-white dark:bg-dark-brand-surface p-8 rounded-lg text-center transform transition-transform hover:-translate-y-2 shadow-lg h-full">
-        <div className="flex justify-center items-center h-12 w-12 rounded-full bg-brand-primary mx-auto text-white">
-            {icon}
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, link }) => (
+    <NavLink to={link} className="block group h-full">
+        <div className="bg-brand-white dark:bg-dark-brand-surface p-8 rounded-lg text-center transform transition-transform group-hover:-translate-y-2 shadow-lg h-full">
+            <div className="flex justify-center items-center h-12 w-12 rounded-full bg-brand-primary mx-auto text-white">
+                {icon}
+            </div>
+            <h3 className="mt-6 text-xl font-bold text-brand-text-primary dark:text-dark-brand-text-primary">{title}</h3>
+            <p className="mt-2 text-brand-text-secondary dark:text-dark-brand-text-secondary">{description}</p>
         </div>
-        <h3 className="mt-6 text-xl font-bold text-brand-text-primary dark:text-dark-brand-text-primary">{title}</h3>
-        <p className="mt-2 text-brand-text-secondary dark:text-dark-brand-text-secondary">{description}</p>
-    </div>
+    </NavLink>
 );
 
 export default HomePage;

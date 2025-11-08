@@ -110,7 +110,7 @@ export const portfolioItems = [
     description: 'Provided comprehensive IT support, including network security, hardware maintenance, and 24/7 helpdesk services, ensuring uninterrupted business operations. We act as the firm\'s outsourced IT department, handling all their technology needs.',
     technologies: ['Active Directory', 'Cybersecurity', 'Network Monitoring'],
     results: 'Achieved 99.9% system uptime and resolved 95% of support tickets within the first hour.',
-    imageUrl: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1470&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c7da?q=80&w=1470&auto=format&fit=crop',
     galleryImages: []
   },
   {

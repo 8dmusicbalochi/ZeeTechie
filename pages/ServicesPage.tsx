@@ -54,9 +54,19 @@ const services = [
       'Security monitoring',
       'Long-term maintenance contracts'
     ],
-     imageUrl: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1470&auto=format&fit=crop'
+     imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c7da?q=80&w=1470&auto=format&fit=crop'
    }
 ];
+
+const slugify = (text: string) =>
+  text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/[^\w-]+/g, '') // Remove all non-word chars
+    .replace(/--+/g, '-') // Replace multiple - with single -
+    .replace(/^-+/, '') // Trim - from start of text
+    .replace(/-+$/, ''); // Trim - from end of text
 
 const ServicesPage: React.FC = () => {
   return (
@@ -74,7 +84,7 @@ const ServicesPage: React.FC = () => {
         <div className="mt-16 space-y-16">
           {services.map((service, index) => (
             <AnimatedSection key={service.title}>
-                <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12`}>
+                <div id={slugify(service.title)} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 scroll-mt-24`}>
                 <div className="md:w-1/2 bg-brand-white dark:bg-dark-brand-surface p-8 rounded-lg shadow-lg">
                     <div className="flex items-center gap-5 mb-4">
                       <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-full bg-brand-background dark:bg-gray-700 text-brand-primary">
