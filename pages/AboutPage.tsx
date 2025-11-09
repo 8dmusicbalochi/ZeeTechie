@@ -4,12 +4,13 @@ import LinkedInIcon from '../components/icons/LinkedInIcon';
 import Tooltip from '../components/Tooltip';
 import EnvelopeIcon from '../components/icons/EnvelopeIcon';
 import AnimatedCounter from '../components/AnimatedCounter';
+import waheedImg from '../images/waheed.jpg';
 
 const teamMembers = [
   {
-    name: 'Ahmed Baloch',
+    name: 'Waheed',
     role: 'Founder & CEO',
-    imageUrl: '/images/waheed.jpg',
+    imageUrl: waheedImg,
     linkedinUrl: 'https://www.linkedin.com/in/waheedbaloch58',
     bio: 'With over a decade of experience in tech leadership, Waheed founded ZTechie to bridge the gap between business needs and technological solutions. He is passionate about driving innovation and fostering a culture of excellence.',
     email: 'waheed@ztechie.com',
