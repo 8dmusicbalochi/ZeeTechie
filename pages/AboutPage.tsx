@@ -4,12 +4,15 @@ import LinkedInIcon from '../components/icons/LinkedInIcon';
 import Tooltip from '../components/Tooltip';
 import EnvelopeIcon from '../components/icons/EnvelopeIcon';
 import AnimatedCounter from '../components/AnimatedCounter';
+import waheedImg from '../images/waheed.jpg';
+import jaismImg from '../images/jasim.jpg';
+import naseemImg from '../images/Naseem.jpg';
 
 const teamMembers = [
   {
     name: 'Waheed',
     role: 'Founder & CEO',
-    imageUrl: '/images/waheed.jpg',
+    imageUrl: waheedImg,
     linkedinUrl: 'https://www.linkedin.com/in/waheedbaloch58',
     bio: 'With over a decade of experience in tech leadership, Waheed founded ZTechie to bridge the gap between business needs and technological solutions. He is passionate about driving innovation and fostering a culture of excellence.',
     email: 'waheed@ztechie.com',
@@ -27,7 +30,7 @@ const teamMembers = [
   {
     name: 'Jasim Murad',
     role: 'UI/UX Designer',
-    imageUrl: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=400&auto=format&fit=crop',
+    imageUrl: jasimImg,
     linkedinUrl: 'https://www.linkedin.com/in/jasim-murad',
     bio: 'Jasim crafts intuitive and beautiful user experiences. He believes that great design is not just about aesthetics, but about creating seamless interactions that solve real user problems.',
     email: 'jasim@ztechie.com',
@@ -45,7 +48,7 @@ const teamMembers = [
   {
     name: 'Naseem Jumma',
     role: 'Cyber Security Specialist',
-    imageUrl: 'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=400&auto=format&fit=crop',
+    imageUrl: naseemImg,
     linkedinUrl: 'https://www.linkedin.com/in/naseem-jumma',
     bio: 'Naseem is our digital guardian, dedicated to protecting our clients\' assets from cyber threats. He implements cutting-edge security measures to ensure data integrity and peace of mind.',
     email: 'naseem@ztechie.com',
