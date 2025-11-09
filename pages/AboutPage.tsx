@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: 'Waheed',
     role: 'Founder & CEO',
-    imageUrl: 'https://drive.google.com/file/d/1Z2mEDrl_UisVy02YqQsigChvFOmFxvj2/view?usp=drive_link',
+    imageUrl: 'https://drive.google.com/file/d/1Z2mEDrl_UisVy02YqQsigChvFOmFxvj2/view',
     linkedinUrl: 'https://www.linkedin.com/in/waheedbaloch58',
     bio: 'With over a decade of experience in tech leadership, Waheed founded ZTechie to bridge the gap between business needs and technological solutions. He is passionate about driving innovation and fostering a culture of excellence.',
     email: 'waheed@ztechie.com',
