@@ -19,7 +19,7 @@ const teamMembers = [
   {
     name: 'Mamoon Rasheed',
     role: 'Lead Developer',
-    imageUrl: 'https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=400&auto=format&fit=crop',
+    imageUrl: 'https://unsplash.com/photos/woman-using-a-laptop-in-a-field-5vVjIErxZlo',
     linkedinUrl: 'https://www.linkedin.com/in/mamoon-rasheed',
     bio: 'Mamoon is a full-stack wizard who architects and builds robust, scalable applications. He has a keen eye for detail and a love for clean, efficient code that powers our clients\' success.',
     email: 'mamoon@ztechie.com',
