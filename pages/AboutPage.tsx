@@ -4,15 +4,12 @@ import LinkedInIcon from '../components/icons/LinkedInIcon';
 import Tooltip from '../components/Tooltip';
 import EnvelopeIcon from '../components/icons/EnvelopeIcon';
 import AnimatedCounter from '../components/AnimatedCounter';
-import waheedImg from '../images/waheed.jpg';
-import jasimImg from '../images/jasim.jpg';
-import naseemImg from '../images/Naseem.jpg';
 
 const teamMembers = [
   {
     name: 'Waheed',
     role: 'Founder & CEO',
-    imageUrl: waheedImg,
+    imageUrl: '/images/waheed.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/waheedbaloch58',
     bio: 'With over a decade of experience in tech leadership, Waheed founded ZTechie to bridge the gap between business needs and technological solutions. He is passionate about driving innovation and fostering a culture of excellence.',
     email: 'waheed@ztechie.com',
@@ -21,7 +18,7 @@ const teamMembers = [
   {
     name: 'Mamoon Rasheed',
     role: 'Lead Developer',
-    imageUrl: waheedImg,
+    imageUrl: 'https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=400&auto=format&fit=crop',
     linkedinUrl: 'https://www.linkedin.com/in/mamoon-rasheed',
     bio: 'Mamoon is a full-stack wizard who architects and builds robust, scalable applications. He has a keen eye for detail and a love for clean, efficient code that powers our clients\' success.',
     email: 'mamoon@ztechie.com',
@@ -30,7 +27,7 @@ const teamMembers = [
   {
     name: 'Jasim Murad',
     role: 'UI/UX Designer',
-    imageUrl: jasimImg,
+    imageUrl: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=400&auto=format&fit=crop',
     linkedinUrl: 'https://www.linkedin.com/in/jasim-murad',
     bio: 'Jasim crafts intuitive and beautiful user experiences. He believes that great design is not just about aesthetics, but about creating seamless interactions that solve real user problems.',
     email: 'jasim@ztechie.com',
@@ -48,7 +45,7 @@ const teamMembers = [
   {
     name: 'Naseem Jumma',
     role: 'Cyber Security Specialist',
-    imageUrl: naseemImg,
+    imageUrl: 'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=400&auto=format&fit=crop',
     linkedinUrl: 'https://www.linkedin.com/in/naseem-jumma',
     bio: 'Naseem is our digital guardian, dedicated to protecting our clients\' assets from cyber threats. He implements cutting-edge security measures to ensure data integrity and peace of mind.',
     email: 'naseem@ztechie.com',
