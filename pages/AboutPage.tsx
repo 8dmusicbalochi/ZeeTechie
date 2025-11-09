@@ -7,7 +7,7 @@ import AnimatedCounter from '../components/AnimatedCounter';
 
 const teamMembers = [
   {
-    name: 'Waheed',
+    name: 'Ahmed Baloch',
     role: 'Founder & CEO',
     imageUrl: '/images/waheed.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/waheedbaloch58',
