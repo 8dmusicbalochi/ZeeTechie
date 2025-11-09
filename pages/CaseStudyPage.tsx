@@ -12,13 +12,13 @@ import FacebookIcon from '../components/icons/FacebookIcon';
 import ClipboardIcon from '../components/icons/ClipboardIcon';
 import SpinnerIcon from '../components/icons/SpinnerIcon';
 import LazyImage from '../components/LazyImage';
+import ImageCarousel from '../components/ImageCarousel';
 
 const CaseStudyPage: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
     const project = portfolioItems.find(item => slugify(item.title) === slug);
 
     const [isLoading, setIsLoading] = useState(true);
-    const [mainImage, setMainImage] = useState(project?.imageUrl);
     const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
     const [isResultsExpanded, setIsResultsExpanded] = useState(false);
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
@@ -30,16 +30,13 @@ const CaseStudyPage: React.FC = () => {
 
         // Simulate loading for better UX
         const timer = setTimeout(() => {
-            if (project) {
-                setMainImage(project.imageUrl);
-            }
             setIsDescriptionExpanded(false);
             setIsResultsExpanded(false);
             setIsLoading(false);
         }, 500); // 0.5 second delay
 
         return () => clearTimeout(timer);
-    }, [slug, project]);
+    }, [slug]);
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(window.location.href).then(() => {
@@ -114,45 +111,16 @@ const CaseStudyPage: React.FC = () => {
                     </p>
                 </AnimatedSection>
 
-                <AnimatedSection transitionDelay="delay-100">
-                     <LazyImage
-                        key={mainImage}
-                        src={mainImage ?? ''}
-                        alt={`Case study for ${project.title}`}
-                        containerClassName="mt-12 w-full aspect-video rounded-lg shadow-2xl"
-                        imageClassName="w-full h-full object-cover rounded-lg"
-                    />
-                </AnimatedSection>
-                
-                {project.galleryImages && project.galleryImages.length > 0 && (
-                    <AnimatedSection transitionDelay="delay-200">
-                        <div className="mt-12">
-                            <h2 className="text-2xl font-bold text-brand-text-primary dark:text-dark-brand-text-primary mb-4">Project Gallery</h2>
-                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
-                                {allImages.map((imgUrl, index) => (
-                                    <button
-                                        key={index}
-                                        onClick={() => setMainImage(imgUrl)}
-                                        className={`rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-background dark:focus:ring-offset-dark-brand-background focus:ring-brand-primary ${mainImage === imgUrl ? 'ring-2 ring-brand-primary' : ''}`}
-                                        aria-label={`View image ${index + 1}`}
-                                    >
-                                        <LazyImage
-                                            src={imgUrl}
-                                            alt={`Gallery image ${index + 1} for ${project.title}`}
-                                            containerClassName="w-full h-24"
-                                            imageClassName="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                                        />
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                    </AnimatedSection>
-                )}
-
-
-                <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
+                {/* Content Section */}
+                <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+                    {/* Left Column: Carousel, About & Results */}
                     <div className="lg:col-span-2">
-                        <AnimatedSection transitionDelay="delay-200">
+                        {/* Main Image Carousel */}
+                        <AnimatedSection transitionDelay="delay-100">
+                            <ImageCarousel images={allImages} altPrefix={project.title} />
+                        </AnimatedSection>
+
+                        <AnimatedSection transitionDelay="delay-300" className="mt-12">
                             <h2 className="text-3xl font-bold text-brand-text-primary dark:text-dark-brand-text-primary">About the Project</h2>
                             <p className={`mt-4 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary leading-relaxed ${isDescriptionLong && !isDescriptionExpanded ? 'line-clamp-4' : ''}`}>
                                 {project.description}
@@ -164,7 +132,7 @@ const CaseStudyPage: React.FC = () => {
                             )}
                         </AnimatedSection>
 
-                         <AnimatedSection transitionDelay="delay-300">
+                         <AnimatedSection transitionDelay="delay-400">
                             <h2 className="mt-12 text-3xl font-bold text-brand-text-primary dark:text-dark-brand-text-primary">Results & Impact</h2>
                             <p className={`mt-4 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary leading-relaxed ${isResultsLong && !isResultsExpanded ? 'line-clamp-4' : ''}`}>
                                 {project.results}
@@ -176,9 +144,11 @@ const CaseStudyPage: React.FC = () => {
                             )}
                         </AnimatedSection>
                     </div>
+
+                    {/* Right Column: Project Details */}
                     <div className="lg:col-span-1">
-                        <AnimatedSection transitionDelay="delay-400">
-                            <div className="bg-brand-white dark:bg-dark-brand-surface p-8 rounded-lg shadow-lg sticky top-24">
+                        <AnimatedSection transitionDelay="delay-200">
+                            <div className="sticky top-24 bg-brand-white dark:bg-dark-brand-surface p-8 rounded-lg shadow-lg">
                                 <h3 className="text-2xl font-bold text-brand-text-primary dark:text-dark-brand-text-primary">Project Details</h3>
                                 <div className="mt-6 space-y-4">
                                     <div>

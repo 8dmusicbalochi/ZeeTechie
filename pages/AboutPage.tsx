@@ -3,6 +3,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import LinkedInIcon from '../components/icons/LinkedInIcon';
 import Tooltip from '../components/Tooltip';
 import EnvelopeIcon from '../components/icons/EnvelopeIcon';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const teamMembers = [
   {
@@ -12,6 +13,7 @@ const teamMembers = [
     linkedinUrl: 'https://www.linkedin.com/in/waheed',
     bio: 'With over a decade of experience in tech leadership, Waheed founded ZTechie to bridge the gap between business needs and technological solutions. He is passionate about driving innovation and fostering a culture of excellence.',
     email: 'waheed@ztechie.com',
+    expertise: ['Strategic Planning', 'Business Development', 'Cloud Architecture', 'Client Relations'],
   },
   {
     name: 'Mamoon Rasheed',
@@ -20,6 +22,7 @@ const teamMembers = [
     linkedinUrl: 'https://www.linkedin.com/in/mamoon-rasheed',
     bio: 'Mamoon is a full-stack wizard who architects and builds robust, scalable applications. He has a keen eye for detail and a love for clean, efficient code that powers our clients\' success.',
     email: 'mamoon@ztechie.com',
+    expertise: ['Full-Stack Development', 'React & Node.js', 'E-commerce Platforms', 'AI Integration'],
   },
   {
     name: 'Jasim Murad',
@@ -28,6 +31,7 @@ const teamMembers = [
     linkedinUrl: 'https://www.linkedin.com/in/jasim-murad',
     bio: 'Jasim crafts intuitive and beautiful user experiences. He believes that great design is not just about aesthetics, but about creating seamless interactions that solve real user problems.',
     email: 'jasim@ztechie.com',
+    expertise: ['User-Centered Design', 'Mobile-First Prototyping', 'Brand Identity', 'Figma & Adobe XD'],
   },
   {
     name: 'Ameer Jan',
@@ -36,6 +40,7 @@ const teamMembers = [
     linkedinUrl: 'https://www.linkedin.com/in/ameer-jan',
     bio: 'Ameer ensures that projects are delivered on time and within budget. His exceptional organizational skills and clear communication keep our team and clients aligned and moving forward.',
     email: 'ameer@ztechie.com',
+    expertise: ['Agile Methodologies', 'Scrum', 'Client Communication', 'Risk Management'],
   },
   {
     name: 'Naseem Jumma',
@@ -44,6 +49,7 @@ const teamMembers = [
     linkedinUrl: 'https://www.linkedin.com/in/naseem-jumma',
     bio: 'Naseem is our digital guardian, dedicated to protecting our clients\' assets from cyber threats. He implements cutting-edge security measures to ensure data integrity and peace of mind.',
     email: 'naseem@ztechie.com',
+    expertise: ['Penetration Testing', 'Cloud Security', 'Threat Intelligence', 'Compliance'],
   },
 ];
 
@@ -91,6 +97,39 @@ const AboutPage: React.FC = () => {
                 </div>
             </div>
         </AnimatedSection>
+
+        {/* Stats Section */}
+        <AnimatedSection>
+            <div className="mt-24 bg-brand-white dark:bg-dark-brand-surface rounded-lg shadow-lg py-16 sm:py-20">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div className="p-4">
+                        <p className="text-4xl md:text-5xl font-extrabold text-brand-primary">
+                        <AnimatedCounter end={50} />+
+                        </p>
+                        <p className="mt-2 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary">Projects Completed</p>
+                    </div>
+                    <div className="p-4">
+                        <p className="text-4xl md:text-5xl font-extrabold text-brand-primary">
+                        <AnimatedCounter end={99} />%
+                        </p>
+                        <p className="mt-2 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary">Client Satisfaction</p>
+                    </div>
+                    <div className="p-4">
+                        <p className="text-4xl md:text-5xl font-extrabold text-brand-primary">
+                        <AnimatedCounter end={5} />+
+                        </p>
+                        <p className="mt-2 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary">Years of Experience</p>
+                    </div>
+                    <div className="p-4">
+                        <p className="text-4xl md:text-5xl font-extrabold text-brand-primary">
+                        <AnimatedCounter end={24} />/7
+                        </p>
+                        <p className="mt-2 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary">Expert Support</p>
+                    </div>
+                </div>
+            </div>
+        </AnimatedSection>
+
 
         {/* Our Values */}
         <div className="mt-24">
@@ -157,11 +196,12 @@ interface TeamMemberCardProps {
     linkedinUrl?: string;
     bio: string;
     email: string;
+    expertise: string[];
     isExpanded: boolean;
     onToggleExpand: () => void;
 }
 
-const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, imageUrl, linkedinUrl, bio, email, isExpanded, onToggleExpand }) => (
+const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, imageUrl, linkedinUrl, bio, email, expertise, isExpanded, onToggleExpand }) => (
     <div
       className={`bg-brand-white dark:bg-dark-brand-surface rounded-lg shadow-lg text-center transition-all duration-300 ease-in-out transform hover:-translate-y-2 focus-within:ring-2 focus-within:ring-brand-primary ${isExpanded ? 'ring-2 ring-brand-primary' : ''}`}
     >
@@ -186,13 +226,21 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, imageUrl, l
 
       <div
         id={`bio-${name.replace(/\s+/g, '-')}`}
-        className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-96' : 'max-h-0'}`}
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[500px]' : 'max-h-0'}`}
         aria-hidden={!isExpanded}
       >
         <div className="px-6 pb-6 text-left">
           <p className="text-sm text-brand-text-secondary dark:text-dark-brand-text-secondary border-t border-gray-200 dark:border-gray-700 pt-4">
             {bio}
           </p>
+          <div className="mt-4">
+            <h4 className="text-sm font-semibold text-brand-primary uppercase tracking-wider">Key Expertise</h4>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {expertise.map(skill => (
+                <span key={skill} className="px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 dark:text-brand-accent dark:bg-brand-accent/10 rounded-full">{skill}</span>
+              ))}
+            </div>
+          </div>
           <div className="mt-4 flex justify-center items-center space-x-4">
             {linkedinUrl && (
               <Tooltip text={`View ${name}'s LinkedIn Profile`}>

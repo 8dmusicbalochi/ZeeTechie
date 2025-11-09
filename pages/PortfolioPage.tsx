@@ -218,7 +218,7 @@ const PortfolioPage: React.FC = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item) => (
             <AnimatedSection key={`${activeFilter}-${item.title}`}>
                 <div className="bg-brand-white dark:bg-dark-brand-surface rounded-lg shadow-lg flex flex-col h-full transition-transform transform hover:scale-105 overflow-hidden group">
@@ -239,16 +239,6 @@ const PortfolioPage: React.FC = () => {
                             <button onClick={() => toggleDescription(item.title)} className="text-sm font-semibold text-brand-primary hover:underline mt-2">
                                 {expandedDescriptions[item.title] ? 'Show Less' : 'Read More'}
                             </button>
-                            
-                            <p className="mt-4 text-lg font-semibold text-brand-text-primary dark:text-dark-brand-text-primary">🧩 Technologies Used</p>
-                            <div className="mt-2 flex flex-wrap gap-2">
-                                {item.technologies.map(tech => (
-                                    <span key={tech} className="px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 dark:text-brand-accent dark:bg-brand-accent/10 rounded-full">{tech}</span>
-                                ))}
-                            </div>
-
-                            <p className="mt-4 text-lg font-semibold text-brand-text-primary dark:text-dark-brand-text-primary">📈 Results</p>
-                            <p className="mt-2 text-brand-text-secondary dark:text-dark-brand-text-secondary">{item.results}</p>
                         </div>
                         <div className="mt-8">
                            <NavLink to={`/portfolio/${slugify(item.title)}`} className="inline-flex items-center justify-center w-full px-6 py-3 font-semibold text-center text-white rounded-lg shadow-md bg-brand-primary hover:opacity-90 transition-all transform hover:scale-105">

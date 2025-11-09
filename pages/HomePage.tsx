@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import AnimatedCounter from '../components/AnimatedCounter';
 import CodeBracketIcon from '../components/icons/CodeBracketIcon';
 import CloudIcon from '../components/icons/CloudIcon';
 import CpuChipIcon from '../components/icons/CpuChipIcon';
@@ -132,38 +131,6 @@ const HomePage: React.FC = () => {
                 </div>
             </AnimatedSection>
             </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-brand-background dark:bg-dark-brand-background py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="p-4">
-              <p className="text-4xl md:text-5xl font-extrabold text-brand-primary">
-                <AnimatedCounter end={50} />+
-              </p>
-              <p className="mt-2 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary">Projects Completed</p>
-            </div>
-            <div className="p-4">
-              <p className="text-4xl md:text-5xl font-extrabold text-brand-primary">
-                <AnimatedCounter end={99} />%
-              </p>
-              <p className="mt-2 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary">Client Satisfaction</p>
-            </div>
-            <div className="p-4">
-              <p className="text-4xl md:text-5xl font-extrabold text-brand-primary">
-                <AnimatedCounter end={5} />+
-              </p>
-              <p className="mt-2 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary">Years of Experience</p>
-            </div>
-            <div className="p-4">
-              <p className="text-4xl md:text-5xl font-extrabold text-brand-primary">
-                <AnimatedCounter end={24} />/7
-              </p>
-              <p className="mt-2 text-lg text-brand-text-secondary dark:text-dark-brand-text-secondary">Expert Support</p>
-            </div>
-          </div>
         </div>
       </section>
 
